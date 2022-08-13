@@ -11,8 +11,11 @@ sudo apt install nginx
 systemctl status nginx
 
 sudo mkdir -p /var/www/sample/html
+
 sudo chown -R $USER:$USER /var/www/sample/html
+
 touch index.html
+
 <h1>Hello world</h1>
 
 sudo ln -s /etc/nginx/site-available/sample /etc/nginx/site-enabled/
@@ -24,5 +27,6 @@ sudo nginx -t
 pm2 start --name=ExpressApp app.js
 
 localation /users {
+
       proxy_pass http://localhost:3000;
 }      
