@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 
 app.get('/',(req, res) => {
-        res.send({ msg: 'Hello'});
+        res.send({ msg: 'Hello World'});
         });
 
 
 app.get('/users',(req, res) => {
-        res.send({ name: 'JJ', age: 18});
+        res.send({ name: 'Peter', age: 18});
         });
 
 
