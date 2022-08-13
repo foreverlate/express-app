@@ -17,3 +17,11 @@ touch index.html
 sudo ln -s /etc/nginx/site-available/sample /etc/nginx/site-enabled/
 
 sudo nginx -t
+
+
+
+pm2 start --name=ExpressApp app.js
+
+localation /users {
+      proxy_pass http://localhost:3000;
+}      
